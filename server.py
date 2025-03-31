@@ -23,7 +23,10 @@ amazon_products_table = dynamodb.Table(DYNAMODB_PRODUCTS_TABLE)
 user_products_table = dynamodb.Table(DYNAMODB_USER_TABLE)
 
 @app.route('/track', methods=['POST'])
+
 def track_product():
+    print('someone req')
+
     data = request.json
     product_url = data.get("productUrl")
     email = data.get("email")
