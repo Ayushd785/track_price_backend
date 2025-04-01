@@ -93,4 +93,4 @@ def track_product():
     return jsonify({"message": "Tracking started successfully", "product": product_info})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,host='0.0.0.0', port=5000)
